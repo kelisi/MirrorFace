@@ -1,9 +1,12 @@
-package com.s.mirror;
+package com.s.mirror.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.s.mirror.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
+
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 
     /**
